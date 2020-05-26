@@ -13,11 +13,11 @@ import java.util.Optional;
 @Qualifier("fakeDB")
 public class FakeDataBaseImpl implements DataBaseInterface {
 
+    private List<UrlChanger> dataBase;
+
     public FakeDataBaseImpl() {
         this.dataBase = new ArrayList<>();
     }
-
-    private List<UrlChanger> dataBase;
 
 
     @Override
@@ -35,6 +35,11 @@ public class FakeDataBaseImpl implements DataBaseInterface {
     }
 
     @Override
+    public List<UrlChanger> selectAllData() {
+         return dataBase;
+    }
+
+    @Override
     public boolean deleteAllData() {
         dataBase.clear();
         return true;
@@ -42,7 +47,12 @@ public class FakeDataBaseImpl implements DataBaseInterface {
 
     @Override
     public boolean insertData(UrlChanger urlChanger) {
-        dataBase.add(urlChanger);
-        return true;
+        if (dataBase.stream()
+                .filter(element -> element.getLongUrl().equals(urlChanger.getLongUrl()))
+                .findFirst().isEmpty()){
+            dataBase.add(urlChanger);
+            return true;
+        }
+        return false;
     }
 }

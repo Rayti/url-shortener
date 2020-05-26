@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.List;
+
 @RestController
 public class UrlShortenerSimpleController {
 
@@ -17,7 +19,7 @@ public class UrlShortenerSimpleController {
 
     @GetMapping("/new")
     @ResponseBody
-    public String addUrl(@RequestParam(name = "lurl") String longUrl) {
+    public String addUrl(@RequestParam(name = "url") String longUrl) {
         return urlShortenerService.addUrlToDataBase(longUrl);
     }
 
@@ -34,6 +36,13 @@ public class UrlShortenerSimpleController {
         redirectView.setUrl( urlShortenerService.getUrlDataByShortUrl(shortUrl).getLongUrl());
 
         return redirectView;
+    }
+
+
+    @GetMapping("/all")
+    @ResponseBody
+    public List<UrlChanger> getAllUrls() {
+        return urlShortenerService.getAllDataBaseUrls();
     }
 
     public void deleteUrl() {

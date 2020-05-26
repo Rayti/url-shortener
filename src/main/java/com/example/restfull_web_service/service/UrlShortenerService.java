@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
@@ -30,13 +31,14 @@ public class UrlShortenerService {
         return dataBaseInterface.selectDataByShortURL(shortUrl).orElse(null);
     }
 
-
+    public List<UrlChanger> getAllDataBaseUrls() {
+        return dataBaseInterface.selectAllData();
+    }
 
     public String addUrlToDataBase(String longUrl) {
         String template = "krejzi_%d";
         String shortUrl = String.format(template, id.incrementAndGet());
-        dataBaseInterface.insertData(new UrlChanger(longUrl, shortUrl));
-        return shortUrl;
+        return dataBaseInterface.insertData(new UrlChanger(longUrl, shortUrl)) ? shortUrl : "Already created";
     }
 
     public boolean clearDataBase() {
