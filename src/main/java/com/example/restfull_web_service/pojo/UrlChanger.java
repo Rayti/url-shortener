@@ -5,8 +5,12 @@ public class UrlChanger {
         this.longUrl = longUrl;
         this.shortUrl = shortUrl;
     }
-    private final String longUrl;
-    private final String shortUrl;
+
+    public UrlChanger() {
+    }
+
+    private  String longUrl;
+    private  String shortUrl;
 
     public String getLongUrl() {
         return longUrl;
@@ -14,5 +18,13 @@ public class UrlChanger {
 
     public String getShortUrl() {
         return shortUrl;
+    }
+
+    public void setLongUrl(String longUrl) {
+        this.longUrl = longUrl;
+    }
+
+    public void setShortUrl(String shortUrl) {
+        this.shortUrl = shortUrl;
     }
 }
