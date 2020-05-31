@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>UrlShortener</title>
+    <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>Url shortener</h1>
+<nav>
+    <ul>
+        <li><a href="/index">Main page</a></li>
+        <li><a href="/generate">Generate short address</a></li>
+        <li><a href="/viewall">View all generated addresses</a></li>
+    </ul>
+</nav>
+<p>Welcome to very <strong>professional</strong>
+webpage that will organize your <i>hard to remember</i>
+URL addresses.</p>
+<ol>
+    <li>This is</li>
+    <li>Ordered list</li>
+    <li>It seems pretty nice so far</li>
+</ol>
+
+<ul>
+    <li>And this is</li>
+    <li>Uonrdered lis</li>
+    <li>Can see the <b>difference</b>?</li>
+</ul>
+<dl>
+    <dt>Spring</dt>
+    <dd>Helps developers to avoid boilerplate coding and
+        create scallable projects.</dd>
+</dl>
+
+<table>
+    <thead>Short and long addresses</thead>
+    <tr>
+        <th>This is supposed to be table cell header</th>
+        <td>1</td>
+        <td>First short address</td>
+        <td>First long address</td>
+    </tr>
+    <tr>
+        <th>This is supposed to be second cell header</th>
+        <td>2</td>
+        <td>Second short address</td>
+        <td>Second long address</td>
+    </tr>
+</table>
+</body>
+
+</html>

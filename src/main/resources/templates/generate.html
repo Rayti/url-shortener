@@ -3,9 +3,18 @@
 <head>
     <title>Url shortener</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/main.css}" rel="stylesheet"/>
 </head>
 <body>
-<h1>Paste url</h1>
+<h1>Url shortener</h1>
+<nav>
+    <ul>
+        <li><a href="/index">Main page</a></li>
+        <li><a href="/generate">Generate short address</a></li>
+        <li><a href="/viewall">View all generated addresses</a></li>
+    </ul>
+</nav>
+<p>Here you can generate your beautiful short url address.</p>
 <form action="#" th:action="@{/receive}"
       th:object="${urlElement}" th:method="post">
     <p>Long URL: <input type="text" th:field="*{longAddress}" /></p>

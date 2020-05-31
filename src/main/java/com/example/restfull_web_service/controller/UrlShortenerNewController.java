@@ -35,12 +35,16 @@ public class UrlShortenerNewController {
         return "receive";
     }
 
-    @GetMapping(value = "/redirect/{shortUrl}" )
+    @GetMapping(value = "/redirect/{shortUrl}")
     public RedirectView redirect(@PathVariable String shortUrl) {
         RedirectView redirectView = new RedirectView();
-        redirectView.setUrl( urlService.getUrlElement(shortUrl).getLongAddress());
+        redirectView.setUrl(urlService.getUrlElement(shortUrl).getLongAddress());
 
         return redirectView;
     }
 
+    @RequestMapping(value = "/index")
+    public String mainPage(Model model) {
+        return "/index";
+    }
 }

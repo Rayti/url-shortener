@@ -1,13 +1,30 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Url shortener</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/main.css}" rel="stylesheet"/>
 </head>
 <body>
-<tr th:each="url: ${urls}">
-    <p th:text="'Short: ' + ${url.getShortAddress()} + '; Long:' +  ${url.getLongAddress()}"/>
-</tr>
-<a href="/generate">Create new short url</a>
+<h1>Url shortener</h1>
+<nav>
+    <ul>
+        <li><a href="/index">Main page</a></li>
+        <li><a href="/generate">Generate short address</a></li>
+        <li><a href="/viewall">View all generated addresses</a></li>
+    </ul>
+</nav>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Short address</td>
+        <td>Long address</td>
+    </tr>
+    <tr th:each="url : ${urls}">
+        <td th:text="${url.getId()}"></td>
+        <td th:text="${url.getShortAddress()}"></td>
+        <td th:text="${url.getLongAddress()}"></td>
+    </tr>
+</table>
 </body>
 </html>
