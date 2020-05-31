@@ -13,9 +13,11 @@ public class UrlConverterService implements UrlConverter {
 
     @Override
     public String convertToShortAddress(String longAddress) {
-        if(longAddress.isBlank() || longAddress.isEmpty()) throw new IllegalArgumentException("Wrong Address!");
-        String shortAddress = longAddress.length() >= 3 ? longAddress.substring(0, 3) : longAddress;
-        return shortAddress + atomicLong.incrementAndGet();
+        if(longAddress.isBlank()
+                || longAddress.isEmpty()
+                || !longAddress.contains("https://")) throw new IllegalArgumentException("Wrong Address!");
+
+        return "short" + atomicLong.incrementAndGet();
     }
 
 }

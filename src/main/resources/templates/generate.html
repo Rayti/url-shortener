@@ -17,7 +17,8 @@
 <p>Here you can generate your beautiful short url address.</p>
 <form action="#" th:action="@{/receive}"
       th:object="${urlElement}" th:method="post">
-    <p>Long URL: <input type="text" th:field="*{longAddress}" /></p>
+    <p>Long URL:</p>
+    <p><input type="text" th:field="*{longAddress}" /></p>
     <p><input type="submit" value="Submit" />
         <input type="reset" value="Reset" /></p>
 </form>

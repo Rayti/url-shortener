@@ -5,10 +5,21 @@ html {
     background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
 }
 h1 {
+    margin-top: 70px;
     font-family: "Open Sans";
     text-align: center;
-    color: rgba(0, 35, 122, 0.5);
+    color: rgba(0, 35, 122, 0.7);
     font-size: 28px;
+    height: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Open Sans";
+    text-align: center;
+    color: rgba(0, 35, 122, 0.8);
+    font-size: 18px;
     height: auto;
     text-decoration: none;
     text-transform: uppercase;
@@ -38,7 +49,7 @@ nav ul li a {
     padding: 18px;
     font-family: "Open Sans";
     text-transform:uppercase;
-    color: rgba(0, 35, 122, 0.5);
+    color: rgba(0, 35, 122, 0.7);
     font-size: 18px;
     text-decoration: none;
     display: block;
@@ -49,6 +60,50 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.1);
     color: rgba(0, 35, 122, 0.7);
 }
+
+table {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: rgba(0, 35, 122, 0.7);
+
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: #55608f;
+
+}
+
+
+form input {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    color: rgba(0, 35, 122, 0.7);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+
 
 
 
