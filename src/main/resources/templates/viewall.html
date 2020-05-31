@@ -6,7 +6,7 @@
 </head>
 <body>
 <tr th:each="url: ${urls}">
-    <p th:text="'Short: ' + ${url.getShortUrl()} + '; Long:' +  ${url.getLongUrl()}"/>
+    <p th:text="'Short: ' + ${url.getShortAddress()} + '; Long:' +  ${url.getLongAddress()}"/>
 </tr>
 <a href="/generate">Create new short url</a>
 </body>
