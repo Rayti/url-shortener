@@ -45,6 +45,6 @@ public class UrlShortenerNewController {
 
     @RequestMapping(value = "/index")
     public String mainPage(Model model) {
-        return "/index";
+        return "indexmenu";
     }
 }
