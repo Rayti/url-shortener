@@ -1,6 +1,6 @@
 # Url shortener
 
-The idea of project is to use short URL addresses to be redirected to original websites which have long URLs.
+The idea of project is to use short URL addresses and redirect them to original websites which have long URLs.
 
 ## Technologies
 - Java
