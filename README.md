@@ -40,5 +40,14 @@ The only purpose of this project is to learn, but feel free to suggest new featu
 
 ## Screenshots
 
-![UrlShortenerImage1]
-()
+/index
+
+![UrlShortenerImage1](https://github.com/Rayti/url-shortener/blob/master/src/main/resources/READMEimages/urlshortener1.png)
+
+/generate
+
+![UrlShortenerImage2](https://github.com/Rayti/url-shortener/blob/master/src/main/resources/READMEimages/urlshortener2.png)
+
+/viewall
+
+![UrlShortenerImage1](https://github.com/Rayti/url-shortener/blob/master/src/main/resources/READMEimages/urlshortener3.png)
